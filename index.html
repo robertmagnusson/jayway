@@ -6,10 +6,30 @@
     <title>Jayway</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
+
+    <script>
+      var robotApp = angular.module('robotApp', []);
+
+      // Create controller
+      robotApp.controller('interfaceCtrl', function($scope) {
+        $scope.coords = [
+          {"pos": "x", "val" : 0},
+          {"pos": "y", "val" : 0}
+        ];
+      });
+    </script>
+
   </head>
   <body>
-    <div class="main" ng-app>
+    <div class="main" ng-app="robotApp" ng-controller="interfaceCtrl">
+      <div class="interface">
 
+        <p class="coordinates coord-{{ coord.pos }}" ng-repeat="coord in coords" >{{ coord.pos }} - value {{ coord.val }}</p>
+
+        <span class="orientation">N</span>
+      </div>
+      <input ng-model="movement" type="text">
+      <button class="btn">Submit</button>
     </div>
   </body>
 </html>
