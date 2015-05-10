@@ -1,0 +1,13 @@
+{
+  "name": "jayway-theme",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-watch": "latest",
+    "jshint-stylish": "latest",
+    "grunt-svg2png": "latest",
+    "grunt-scss-lint": "latest"
+  }
+}
