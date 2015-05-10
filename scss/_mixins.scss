@@ -1,1 +1,41 @@
-// Here you can write your own mixins
+// Animate objects, just period of time the animation will go on.
+@mixin animate($transition-time) {
+  -webkit-transition: all $transition-time ease-in-out;
+  -moz-transition: all $transition-time ease-in-out;
+  -ms-transition: all $transition-time ease-in-out;
+  -o-transition: all $transition-time ease-in-out;
+  transition: all $transition-time ease-in-out;
+}
+
+// Animate objects, just period of time the animation will go on with cubic settings.
+@mixin cubic($transition-time: 0.5s) {
+  -webkit-transition: $transition-time cubic-bezier(0.175, 0.885, 0.32, 1.275) all !important;
+  -moz-transition: $transition-time cubic-bezier(0.175, 0.885, 0.32, 1.275) all !important;
+  -ms-transition: $transition-time cubic-bezier(0.175, 0.885, 0.32, 1.275) all !important;
+  -o-transition: $transition-time cubic-bezier(0.175, 0.885, 0.32, 1.275) all !important;
+  transition: $transition-time cubic-bezier(0.175, 0.885, 0.32, 1.275) all !important;
+}
+
+// Buttons
+@mixin button {
+  background: $main-bg;
+  color: $white;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $default-font;
+  font-weight: bold;
+  padding: 14px 25px;
+  text-shadow: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include animate(0.2s);
+
+  &:hover {
+    background: darken($main-bg, 10%);
+    text-indent: 0;
+  }
+}

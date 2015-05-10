@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Jayway</title>
-    <link rel="stylesheet" type="text/css" href="css/print.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -13,17 +13,34 @@
     <script type="text/javascript" src="app/controllers/interface.controller.js"></script>
   </head>
   <body>
-    <div class="main" ng-app="robotApp" ng-controller="interfaceCtrl">
-      <div class="interface">
+    <div class="main-content" ng-app="robotApp" ng-controller="interfaceCtrl">
+      <div class="main">
+        <h1 class="capitalize">Jayway <span class="bold">Arbetsprov</span></h1>
+        <div class="interface">
 
-        <p class="coordinates coord-{{ coord.pos }}" ng-repeat="coord in coords" >{{ coord.pos }} - {{ coord.val }}</p>
+          <div class="compass bold">
+            <span class="direction north">N</span>
+            <span class="direction east">E</span>
+            <span class="direction south">S</span>
+            <span class="direction west">W</span>
+            <div class="pointer direction-{{ orient }}"></div>
+          </div>
 
-        <span class="orientation direction-{{ orient }}">{{ orient }}</span>
+          <div class="coordinates-wrapper">
+            <div class="coordinates coord-{{ coord.pos }}" ng-repeat="coord in coords" >
+              <span class="position bold">{{ coord.pos }}</span>
+              <span class="value">{{ coord.val }}<span>
+            </div>
+          </div>
+        </div>
       </div>
-      <form ng-submit="submit()">
-        <input ng-model="movement" type="text">
-        <button class="btn">Submit</button>
-      </form>
+      <footer>
+        <form ng-submit="submit()">
+          <span class="compass-icon"></span>
+          <input ng-model="movement" type="text" placeholder="Ange ett värde..">
+          <button class="btn">Flytta</button>
+        </form>
+      </footer>
     </div>
   </body>
 </html>

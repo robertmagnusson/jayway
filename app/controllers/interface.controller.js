@@ -42,7 +42,6 @@ robotApp.controller('interfaceCtrl', function($scope) {
           resultString += $scope.orient;
         };
       }
-      $scope.orient = resultString.slice(-1);
     }
 
     // Loop through the movement string

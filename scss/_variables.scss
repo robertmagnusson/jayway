@@ -6,7 +6,22 @@ $max-width: 1180px;
 // Base font-size and line-height
 $base-font-size: 1.6;
 $base-line-height: 1.5;
+$default-font: 'Lato', Helvetica, Arial, sans-serif;
 
 // Visual grid that can be used if neat helpers is activated
 // $visual-grid : true;
 // $visual-grid-color: #e0eef7;
+
+// Colors
+$main-bg: #0AC5F4;
+
+// Main colors
+$white: #FFFFFF;
+$black: #221F1F;
+$dark-gray: #3C3535;
+
+// Elements
+$border-color: #E8E8E8;
+
+// Border-radius
+$radius: 2px;

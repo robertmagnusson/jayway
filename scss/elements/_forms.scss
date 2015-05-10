@@ -1,0 +1,22 @@
+form {
+  display: block;
+  width: 385px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  position: relative;
+  background: url(../graphics/compass.svg) no-repeat center left;
+  padding-left: 50px;
+  background-size: 35px;
+
+  input {
+    background: $dark-gray;
+    border: none;
+    padding: 14px 10px;
+    min-width: 235px;
+  }
+}
+
+button {
+  @include button;
+}

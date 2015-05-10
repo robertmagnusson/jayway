@@ -11,7 +11,10 @@ html {
 
 html {
   font-size: 62.5%;
-  min-height: 100%; }
+  min-height: 100%;
+  background: #0AC5F4;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  color: #FFFFFF; }
 
 input,
 form,
@@ -24,6 +27,136 @@ button,
 [type=submit] {
   border: 0; }
 
+h1 {
+  font-size: 72px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 40px; }
+
+.capitalize {
+  text-transform: uppercase; }
+
+.bold {
+  font-weight: 700; }
+
 .main {
-  width: 600px;
-  margin: 200px auto 0; }
+  width: 900px;
+  margin: 50px auto 0;
+  padding: 40px; }
+
+.coordinates-wrapper {
+  width: 170px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px; }
+
+.coordinates {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 40px; }
+  .coordinates:first-child {
+    margin-left: 0; }
+  .coordinates .position {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-right: 10px; }
+  .coordinates .value {
+    font-weight: 300;
+    font-size: 60px; }
+
+.compass {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 50%;
+  border: 1px dashed #FFFFFF; }
+  .compass .direction {
+    position: absolute; }
+  .compass .north {
+    left: 95px;
+    top: 20px; }
+  .compass .south {
+    left: 95px;
+    bottom: 20px; }
+  .compass .east {
+    right: 25px;
+    top: 90px; }
+  .compass .west {
+    left: 25px;
+    top: 90px; }
+  .compass .pointer {
+    background: url("../graphics/needle.svg") no-repeat center;
+    width: 60px;
+    height: 40px;
+    background-size: 15px 40px;
+    /* Centering it */
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin-left: -30px;
+    margin-top: -40px;
+    transform-origin: bottom center;
+    -webkit-transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) all !important;
+    -moz-transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) all !important;
+    -ms-transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) all !important;
+    -o-transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) all !important;
+    transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) all !important; }
+    .compass .pointer.direction-1 {
+      transform: rotate(0deg); }
+    .compass .pointer.direction-2 {
+      transform: rotate(90deg); }
+    .compass .pointer.direction-3 {
+      transform: rotate(180deg); }
+    .compass .pointer.direction-4 {
+      transform: rotate(270deg); }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #221F1F;
+  height: 160px;
+  padding: 55px 0; }
+
+form {
+  display: block;
+  width: 385px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  position: relative;
+  background: url(../graphics/compass.svg) no-repeat center left;
+  padding-left: 50px;
+  background-size: 35px; }
+  form input {
+    background: #3C3535;
+    border: none;
+    padding: 14px 10px;
+    min-width: 235px; }
+
+button {
+  background: #0AC5F4;
+  color: #FFFFFF;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  padding: 14px 25px;
+  text-shadow: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  button:hover {
+    background: #089dc3;
+    text-indent: 0; }
