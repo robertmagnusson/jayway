@@ -42,26 +42,28 @@ robotApp.controller('interfaceCtrl', function($scope) {
           resultString += $scope.orient;
         };
       }
+
+      // Loop through the movement string
+      for (var u = 0; u < resultString.length;  u++) {
+        // if the robot moves north and is within grid boundries
+        if(resultString[u] == '1' && $scope.coords[1]['val'] < gridWidth) {
+          $scope.coords[1]['val']++;
+        }
+        // if the robot moves east and is within grid boundries
+        if(resultString[u] == '2' && $scope.coords[0]['val'] < gridHeight) {
+          $scope.coords[0]['val']++;
+        }
+        // if the robot moves south and is within grid boundries
+        if(resultString[u] == '3' && $scope.coords[1]['val'] > 0) {
+          $scope.coords[1]['val']--;
+        }
+        // if the robot moves west and is within grid boundries
+        if(resultString[u] == '4' && $scope.coords[0]['val'] > 0) {
+          $scope.coords[0]['val']--;
+        }
+      }
     }
 
-    // Loop through the movement string
-    for (var u = 0; u < resultString.length;  u++) {
-      // if the robot moves north and is within grid boundries
-      if(resultString[u] == '1' && $scope.coords[1]['val'] < gridWidth) {
-        $scope.coords[1]['val']++;
-      }
-      // if the robot moves east and is within grid boundries
-      if(resultString[u] == '2' && $scope.coords[0]['val'] < gridHeight) {
-        $scope.coords[0]['val']++;
-      }
-      // if the robot moves south and is within grid boundries
-      if(resultString[u] == '3' && $scope.coords[1]['val'] > 0) {
-        $scope.coords[1]['val']--;
-      }
-      // if the robot moves west and is within grid boundries
-      if(resultString[u] == '4' && $scope.coords[0]['val'] > 0) {
-        $scope.coords[0]['val']--;
-      }
-    }
+    $scope.movement = "";
   }
 });
