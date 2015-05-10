@@ -1,3 +1,4 @@
+//*---- General
 form {
   display: block;
   width: 385px;
@@ -17,6 +18,7 @@ form {
   }
 }
 
+//*---- Include button style from _mixins.scss
 button {
   @include button;
 }

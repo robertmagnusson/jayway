@@ -1,3 +1,4 @@
+//*---- General
 .capitalize {
   text-transform: uppercase;
 }
@@ -12,6 +13,7 @@
   padding: 40px;
 }
 
+//*---- Coordinates
 .coordinates-wrapper {
   width: 170px;
   margin-left: auto;
@@ -40,6 +42,7 @@
   }
 }
 
+//*---- Compass
 .compass {
   position: relative;
   width: 200px;
@@ -49,6 +52,7 @@
   border-radius: 50%;
   border: 1px dashed $white;
 
+  // Positioning for all direction indicators
   .direction {
     position: absolute;
   }
@@ -74,12 +78,12 @@
     top: 90px;
   }
 
+  //*---- Compass needle
   .pointer {
     background: url('../graphics/needle.svg') no-repeat center;
     width: 60px;
     height: 40px;
     background-size: 15px 40px;
-    /* Centering it */
     position: relative;
     left: 50%;
     top: 50%;
@@ -88,18 +92,22 @@
     transform-origin: bottom center;
     @include cubic(0.2s);
 
+    // Rotation when facing north
     &.direction-1 {
       transform: rotate(0deg);
     }
 
+    // Rotation when facing east
     &.direction-2 {
       transform: rotate(90deg);
     }
 
+    // Rotation when facing south
     &.direction-3 {
       transform: rotate(180deg);
     }
 
+    // Rotation when facing west
     &.direction-4 {
       transform: rotate(270deg);
     }

@@ -13,11 +13,14 @@
     <script type="text/javascript" src="app/controllers/interface.controller.js"></script>
   </head>
   <body>
+    <!-- .main-content app-scope -->
     <div class="main-content" ng-app="robotApp" ng-controller="interfaceCtrl">
       <div class="main">
         <h1 class="capitalize">Jayway <span class="bold">Arbetsprov</span></h1>
+        <!-- .interface -->
         <div class="interface">
 
+          <!-- .compass -->
           <div class="compass bold">
             <span class="direction north">N</span>
             <span class="direction east">E</span>
@@ -25,15 +28,22 @@
             <span class="direction west">W</span>
             <div class="pointer direction-{{ orient }}"></div>
           </div>
+          <!-- /.compass -->
 
+          <!-- .coordinates-wrapper -->
           <div class="coordinates-wrapper">
-            <div class="coordinates coord-{{ coord.pos }}" ng-repeat="coord in coords" >
+            <div class="coordinates coord-{{ coord.pos }}" ng-repeat="coord in coords">
               <span class="position bold">{{ coord.pos }}</span>
-              <span class="value">{{ coord.val }}<span>
+              <span class="value">{{ coord.val }}</span>
             </div>
           </div>
+          <!-- /.coordinates-wrapper -->
+
         </div>
+        <!-- /.interface -->
       </div>
+
+      <!-- footer -->
       <footer>
         <form ng-submit="submit()">
           <span class="compass-icon"></span>
@@ -41,6 +51,9 @@
           <button class="btn">Flytta</button>
         </form>
       </footer>
+      <!-- /footer -->
+
     </div>
+    <!-- /.main-content app-scope -->
   </body>
 </html>
