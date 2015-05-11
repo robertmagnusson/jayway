@@ -4,8 +4,8 @@
 robotApp.controller('interfaceCtrl', function($scope) {
   // Create array of coordinates
   $scope.coords = [
-    {"pos": "x", "val" : 0}, // Coordinates - X
-    {"pos": "y", "val" : 0}  // Coordinates - Y
+    {"pos": "x", "val" : 0}, // Coordinates - X - Change this to set starting position in X-axis
+    {"pos": "y", "val" : 0}  // Coordinates - Y - Change this to set starting position in Y-axis
   ];
 
   // Global variables
